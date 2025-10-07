@@ -7,11 +7,11 @@ from flask import Flask, request, jsonify, make_response
 from flask_cors import CORS
 import traceback
 
-# Import the main service
 from investment_advisor_service import InvestmentAdvisorService
 from financial_data_service import FinancialDataService
+# 주요 라이브러리 및 서비스 모듈 import
 
-
+# API 서버의 모든 기능을 포함하는 클래스
 class InvestmentAdvisorAPI:
     """
     Flask-based REST API server for Investment Advisor Service.
@@ -77,7 +77,8 @@ class InvestmentAdvisorAPI:
         
         # Register error handlers
         self._register_error_handlers()
-    
+
+    # 라우트 및 엔드포인트 등록
     def _register_routes(self):
         """Register all API routes."""
         
